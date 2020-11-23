@@ -52,7 +52,7 @@ const UpdateForm = () => {
         const path = window.location.pathname.split('/');
         const id = path[3];
 
-        axios.put(`http://localhost:5000/api/recipes/${id}`, values)
+        axios.put(`https://recipestorage-app.herokuapp.com/api/recipes/${id}`, values)
         .then(res => {
             console.log(res);
             console.log(res.data.json);

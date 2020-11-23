@@ -25,7 +25,7 @@ const Delete = (props) => {
     //This will handle the deletion of Recipes from the Database
     const handleDelete = (e) => {
         e.preventDefault()
-        axios.delete(`http://localhost:5000/api/recipes/${values.id}`, { params: { id: values.id } })
+        axios.delete(`https://recipestorage-app.herokuapp.com/api/recipes/${values.id}`, { params: { id: values.id } })
         .then(res => {
             console.log(res);
             console.log(res.data.json);

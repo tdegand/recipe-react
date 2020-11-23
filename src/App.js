@@ -23,7 +23,7 @@ class App extends Component {
 
   //asynchronous call to database to get all recipes to be displayed
   async componentDidMount(){
-    await axios.get(`http://localhost:5000/api/recipes`)
+    await axios.get(`https://recipestorage-app.herokuapp.com/api/recipes`)
     .then(data => {
       const recipes = data.data.recipes;
       this.setState({ recipes });

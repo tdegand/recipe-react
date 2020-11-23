@@ -15,7 +15,7 @@ import history from '../history';
     //Handles the posting of new items to the database
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:5000/api/recipes`, values)
+        axios.post(`https://recipestorage-app.herokuapp.com/api/recipes`, values)
         .then(res => {
             console.log(res);
             console.log(res.data.json);
